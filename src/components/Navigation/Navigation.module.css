@@ -1,0 +1,31 @@
+.nav {
+  background-color: #282c34;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.navList {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+.link {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.link:hover {
+  color: #61dafb;
+}
+
+.isActive {
+  font-weight: bold;
+  text-decoration: underline;
+  color: #61dafb;
+}

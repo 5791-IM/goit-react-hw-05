@@ -1,0 +1,23 @@
+.error {
+  color: red;
+  font-size: 16px;
+  text-align: center;
+}
+
+.message {
+  font-size: 16px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+}
+
+.item {
+  list-style: none;
+  text-align: center;
+}

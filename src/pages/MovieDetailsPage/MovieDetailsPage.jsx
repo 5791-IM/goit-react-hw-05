@@ -1,16 +1,15 @@
-import { useEffect, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 import {
   useParams,
   Link,
   useNavigate,
   useLocation,
-  Route,
-  Routes,
+  Outlet,
 } from "react-router-dom";
 import { getMovieDetails } from "../../movies-api";
 
-import MovieCast from "../../components/MovieCast/MovieCast";
-import MovieReviews from "../../components/MovieReviews/MovieReviews";
+// import MovieCast from "../../components/MovieCast/MovieCast";
+// import MovieReviews from "../../components/MovieReviews/MovieReviews";
 import Loader from "../../components/Loader/Loader";
 import ErrorMessage from "../../components/ErrorMessage/ErrorMessage";
 import css from "./MovieDetailsPage.module.css";
@@ -88,10 +87,10 @@ const MovieDetailsPage = () => {
           </li>
         </ul>
       </div>
-      <Routes>
-        <Route path="cast" element={<MovieCast />} />
-        <Route path="reviews" element={<MovieReviews />} />
-      </Routes>
+
+      <Suspense fallback={<div>Loading sub component...</div>}>
+        <Outlet />
+      </Suspense>
     </div>
   );
 };
